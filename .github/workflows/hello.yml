@@ -8,5 +8,5 @@ jobs:
       - name: Check out repostory code
         uses: actions/checkout@v4
 
-      - run: python hello.py 
+      - run: python 04.GitOps/hello.py 
       
