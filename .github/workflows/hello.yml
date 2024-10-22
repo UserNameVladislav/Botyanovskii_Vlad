@@ -2,18 +2,12 @@ name: Action_Hello_World
 on:
   push:
     branches: ["master"]
-<<<<<<< HEAD
 
   jobs: 
-    GitHub-Actions-hello:
-=======
-jobs:
-    Hello-World-Actions:
->>>>>>> 76bccf5 (Changed hello.py)
+    build:
       runs-on: ubuntu-latest
       steps:
         -name: Checkout Code
         uses: action/checkout@v3
         -name:
         run: pyton hello.py
-      
