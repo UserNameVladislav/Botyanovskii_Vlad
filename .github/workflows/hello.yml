@@ -8,7 +8,7 @@ on:
     runs-on: ubuntu-latest
     steps:
       -name: Checkout Code
-       uses: action/checkout@v4
+       uses: action/checkout@v3
       -name:
        run: pyton hello.py
       
