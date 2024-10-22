@@ -1,14 +1,14 @@
-name: Action Hello World
+name: Action_Hello_World
 on:
   push:
     branches: ["master"]
 
   jobs: 
-  GitHub-Actions-hello:
-    runs-on: ubuntu-latest
-    steps:
-      -name: Checkout Code
-       uses: action/checkout@v3
-      -name:
-       run: pyton hello.py
+    GitHub-Actions-hello:
+      runs-on: ubuntu-latest
+      steps:
+        -name: Checkout Code
+        uses: action/checkout@v3
+        -name:
+        run: pyton hello.py
       
