@@ -1,13 +1,12 @@
-name: Action_Hello_World
-on:
-  push:
-    branches: ["master"]
+name: GitHub Actions Demo
 
-jobs: 
-  build:
-     
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      -uses: action/checkout@v4
-      -name: GitAction!
-       run: python hello.py
+      - name: Check out repostory code
+        uses: actions/checkout@v4
+
+      - run: python hello.py 
+      
