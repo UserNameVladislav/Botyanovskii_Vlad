@@ -5,9 +5,10 @@ on:
 
 jobs: 
   build:
-     runs-on: ubuntu-latest
-      steps:
-        -name: Checkout Code
-        uses: action/checkout@v3
-        -name:
-        run: pyton hello.py
+     
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout Code
+       uses: action/checkout@v3
+      -name:
+       run: pyton hello.py
