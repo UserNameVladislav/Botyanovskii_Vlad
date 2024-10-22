@@ -1,7 +1,7 @@
-name: Frist Action
+name: Action Hello World
 on:
   push:
-    branches: main
+    branches: ["master"]
 
   jobs: 
   GitHub-Actions-hello:
