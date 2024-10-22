@@ -1,0 +1,14 @@
+name: Frist Action
+on:
+  push:
+    branches: main
+
+  jobs: 
+  GitHub-Actions-hello:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout Code
+       uses: action/checkout@v4
+      -name:
+       run: pyton hello.py
+      
