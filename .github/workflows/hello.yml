@@ -8,7 +8,7 @@ jobs:
       - name: Check out repostory code
         uses: actions/checkout@v4
       - name: Hello ACITON
-      - run: python 04.GitOps/hello.py
-        uses: actions/checkout@v4
-      - name: Calc
-      - run: python 04.GitOps/calc.py
+      - run: |
+          python 04.GitOps/calc.py
+          python 04.GitOps/hello.py
+        
