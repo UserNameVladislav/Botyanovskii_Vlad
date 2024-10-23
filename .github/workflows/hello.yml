@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: Check out repostory code
         uses: actions/checkout@v4
-
-      - run: python 04.GitOps/hello.py 
-      
+      - name: Hello ACITON
+      - run: python 04.GitOps/hello.py
+      - name: Calc
+      - run: python 04.GitOps/calc.py
