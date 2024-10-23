@@ -1,31 +1,21 @@
-print("hello world!")
-a = int(input("Введите первое число: "))
-b = int(input("Введите второе число: "))
-
-
-def result_addition (a, b):
-    result = a + b
-    return result
-    
-def result_subtraction (a, b):
-    result = a - b
-    return result
-
-def result_division (a, b):
-    result = a / b
-    return result
-
-def result_multiplication (a, b):
-    result = a * b
-    return result
-
-x = result_addition(a,b)
-print(x)
-y = result_subtraction(a,b)
-print(y)
-v = result_division(a,b)
-print(v)
-b = result_multiplication(a,b)
-print(b)
-
-
+#A simple calculator
+class Calculator:
+  #empty constructor
+  def __init__(self):
+    pass
+  #add method - given two numbers, return the addition
+  def add(self, x1, x2):
+    return x1 + x2
+  #multiply method - given two numbers, return the 
+  #multiplication of the two
+  def multiply(self, x1, x2):
+    return x1 * x2
+  #subtract method - given two numbers, return the value
+  #of first value minus the second
+  def subtract(self, x1, x2):
+    return x1 - x2
+  #divide method - given two numbers, return the value
+  #of first value divided by the second
+  def divide(self, x1, x2):
+    if x2 != 0:
+      return x1/x2
