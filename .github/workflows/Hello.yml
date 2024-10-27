@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output Actions
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
       - run: python /github/Botyanovskii_Vlad/04.GitOps/hello.py 
