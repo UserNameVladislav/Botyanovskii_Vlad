@@ -10,5 +10,5 @@ jobs:
         run: sudo apt update && sudo apt install -y python3
 
       - name: test calc
-        run: python /04.GitOps/TestCalculator.py
+        run: python 04.GitOps/TestCalculator.py
 
