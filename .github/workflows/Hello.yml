@@ -1,13 +1,14 @@
-name: Hello GitHub Actions!
+name: Hello Git Actions v1!
 on:
   push:
     branches:
     - master
+ 
 jobs:
   prepare:
-    runs-on: ubuntu-latest
-        steps:
-      -	uses: actions/checkout@v4
-      - name: output Hello Actions!
-        run: python hello.py
-
+    runs-on: [my_runner]
+    #runs-on: ubuntu-latest
+    steps:
+      - name: Output Actions
+        uses: actions/upload-artifact@v4
+      - run: python /github/Botyanovskii_Vlad/04.GitOps/hello.py 
