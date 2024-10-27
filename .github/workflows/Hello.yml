@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Install python
         run: sudo apt update && sudo apt install -y python3
-        run: echo "python3 is installed"
+        
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: RUN HELLO.PY
