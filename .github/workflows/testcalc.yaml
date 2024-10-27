@@ -1,5 +1,5 @@
 name: test Cacl
-on: [master]
+on: [push]
 
 jobs:
   unittesting:
