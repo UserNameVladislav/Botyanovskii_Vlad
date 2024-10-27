@@ -1,18 +1,12 @@
-name: Hello Git Actions v1!
-on:
-  push:
-    branches:
-    - master
-
+name:  GitAction
+run-name: TestHelloAction
+on: [push]
 jobs:
   Explore-GitHub-Actions:
-      runs-on: ubuntu-latest 
-      steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Install py
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
-
-      - name: RUN hello.py
-        run: python /github/Botyanovskii_Vlad/04.GitOps/hello.py 
+      - name: RUN HELLO.PY
+        run:  python /github/Botyanovskii_Vlad/04.GitOps/hello.py
+      - run: echo "🍏 This job's status is ${{ job.status }}."
