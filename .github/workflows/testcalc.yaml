@@ -1,8 +1,6 @@
 name: test Cacl
-on:
-  push:
-    branches:
-      - main
+on: [master]
+
 jobs:
   unittesting:
     runs-on: ubuntu-latest
