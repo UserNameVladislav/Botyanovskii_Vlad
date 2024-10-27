@@ -10,7 +10,5 @@ jobs:
      
       - run: |
           python 04.GitOps/calc.py
+          python 04.GitOps/TestCalculator.py
 
-
-
- 

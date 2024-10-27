@@ -1,0 +1,16 @@
+name: test Cacl
+on:
+  push:
+    branches:
+      - main
+jobs:
+  unittesting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install python
+        run: sudo apt update && sudo apt install -y python3
+
+      - name: test calc
+        run: python /04.GitOps/TestCalculator.py
+
