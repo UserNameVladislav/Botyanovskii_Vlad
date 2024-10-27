@@ -1,0 +1,13 @@
+name: Hello GitHub Actions!
+on:
+  push:
+    branches:
+    - master
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+        steps:
+      -	uses: actions/checkout@v4
+      - name: output Hello Actions!
+        run: python hello.py
+
