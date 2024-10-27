@@ -8,5 +8,5 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: RUN HELLO.PY
-        run:  python Botyanovskii_Vlad/04.GitOps/hello.py
+        run:  python 04.GitOps/hello.py
       - run: echo "🍏 This job's status is ${{ job.status }}."
