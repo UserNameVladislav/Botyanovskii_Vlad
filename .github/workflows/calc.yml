@@ -9,6 +9,6 @@ jobs:
         uses: actions/checkout@v4
      
       - run: |
-          python 04.GitOps/calc.py
+          python 04.GitOps/Calculator.py
           python 04.GitOps/TestCalculator.py
 
