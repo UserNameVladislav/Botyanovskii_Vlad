@@ -1,0 +1,10 @@
+---
+- hosts: all_workers
+  vars:
+    message: "Hello Ansible!"
+
+  tasks: 
+  - name: Print Message hello Ansible 
+    debug:
+      msg: "{{message}}"
+    tags: -always
