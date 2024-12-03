@@ -32,7 +32,7 @@ Write an Ansible playbook that prints "Hello, Ansible!" to the console.
     tags: -always
 
 Run the playbook using the ansible-playbook command and ensure it executes successfully.
-![img](ScrinHello.PNG) 
+![img](ScrinHello.png) 
 *
 ok: [host23] => {
     "msg": "Hello Ansible!"
