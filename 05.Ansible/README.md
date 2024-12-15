@@ -34,19 +34,18 @@ Write an Ansible playbook that prints "Hello, Ansible!" to the console.
 Run the playbook using the ansible-playbook command and ensure it executes successfully.
 ```
 ![img](ScrShot/ScrinHello.png)
- 
-```bash
-
+ ```bash
 
 Document the installation process and the steps you took to run the playbook.
+
 Documented ++
-```
+
 
 ##Homework Assignment 2: Managing Remote Hosts
-```bash
+
 Set up a virtual machine (or use an existing one in IT-ACADEMY DC) to act as your remote target.
 Ensure SSH access to the remote machine from your local machine.
-```
+
 ## Закидываем наш ssh key в бастион хост 
 ssh-copy-id -p 32510 jump_sa@178.124.206.53 -yes
 добавляем ключ
@@ -55,6 +54,8 @@ ssh-copy-id -p 32510 jump_sa@178.124.206.53 -yes
 
 
 ## Конфиг ssh на нашем хосте ( делаем проброс через бастион хост, на машины указанные ниже)
+
+
 cat ~/.ssh/config
 Host folder_vlad
 hostname module
@@ -79,11 +80,8 @@ Execute the playbook and verify that the package is installed on the remote host
 ![img](ScrShot/Screen3.png)
 ```bash
 
-
-```
-
 ##Homework Assignment 3: Managing Users and Groups
-```bash
+
 Create a playbook to manage users and groups on a remote host.
 Define tasks to create a new user, assign the user to a specific group, and set a password.
 Parameterize the playbook to allow dynamic user and group names.
