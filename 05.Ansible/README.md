@@ -46,17 +46,40 @@ Documented ++
 ```bash
 Set up a virtual machine (or use an existing one in IT-ACADEMY DC) to act as your remote target.
 Ensure SSH access to the remote machine from your local machine.
+```
+## Закидываем наш ssh key в бастион хост 
+ssh-copy-id -p 32510 jump_sa@178.124.206.53 -yes
+добавляем ключ
+## Он указывается в авторизейшен кей и пропускает нас 
+## Было несколько ключей и нестандартное имя (пришлось писать ssh-add добавил еще 1 в список)
 
 
+## Конфиг ssh на нашем хосте ( делаем проброс через бастион хост, на машины указанные ниже)
+cat ~/.ssh/config
+Host folder_vlad
+hostname module
+port 22
+user UserNameVladislav
+identityfile ~/.ssh/id_rsa
+
+Host ec_bastion
+        User jump_sa
+        Port 32510
+        HostName 178.124.206.53
+Host 192.168.201.* 192.168.202.* 192.168.203.* 192.168.208.*
+```bash
 Write an Ansible playbook to install a basic package (e.g., vim or htop) on the remote host.
+Use inventory files to manage the connection details for the remote host.
+## ansible-playbook -i Inventory.yaml ....
+Execute the playbook and verify that the package is installed on the remote host.
+## verify that on the Screen
 ```
 ![img](ScrShot/Screen2.png)
 
 ![img](ScrShot/Screen3.png)
 ```bash
 
-Use inventory files to manage the connection details for the remote host.
-Execute the playbook and verify that the package is installed on the remote host.
+
 ```
 
 ##Homework Assignment 3: Managing Users and Groups
