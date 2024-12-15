@@ -1,0 +1,17 @@
+---
+- hosts: all_workers # используем все ворк машины
+
+  tasks: # запуск таски
+  - name: Install htop # имя модуля
+    ansible.builtin.apt: # вызов модуля 
+      name: htop # что установить
+      state: present # в каком состоянии (пакет будет установлен, но не обновлен)
+
+   
+  - name: output shell
+    ansible.builtin.shell: dpkg -s htop | grep Status # Выводим конкретно статус
+    register: htop_variable # записали в переменную
+
+  - name: Display output
+    ansible.builtin.debug: # модуль вывода 
+      var: htop_variable.stdout_lines
