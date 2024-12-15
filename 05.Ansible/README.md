@@ -49,7 +49,8 @@ Ensure SSH access to the remote machine from your local machine.
 
 
 Write an Ansible playbook to install a basic package (e.g., vim or htop) on the remote host.
-
+![img](ScrShot/Screen2.png)
+![img](ScrShot/Screen3.png)
 
 Use inventory files to manage the connection details for the remote host.
 Execute the playbook and verify that the package is installed on the remote host.
