@@ -1,0 +1,21 @@
+---
+- hosts: all_workers 
+
+
+  tasks:
+    - name: Install vim
+      ansible.builtin.apt:
+        name: vim
+        state: latest
+
+    - name: check vim
+      ansible.builtin.shell: |
+        dpkg -s vim
+      register: out_vim
+
+    - name: Display output
+      ansible.builtin.debug: # модуль вывода 
+        var: out_vim.stdout_lines
+
+      
+

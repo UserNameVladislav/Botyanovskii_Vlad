@@ -33,7 +33,7 @@ Write an Ansible playbook that prints "Hello, Ansible!" to the console.
 
 Run the playbook using the ansible-playbook command and ensure it executes successfully.
 ```
-![img](ScrinHello.png)
+![img](ScrShot/ScrinHello.png)
  
 ```bash
 
@@ -46,7 +46,11 @@ Documented ++
 ```bash
 Set up a virtual machine (or use an existing one in IT-ACADEMY DC) to act as your remote target.
 Ensure SSH access to the remote machine from your local machine.
+
+
 Write an Ansible playbook to install a basic package (e.g., vim or htop) on the remote host.
+
+
 Use inventory files to manage the connection details for the remote host.
 Execute the playbook and verify that the package is installed on the remote host.
 ```
