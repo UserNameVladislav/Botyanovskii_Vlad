@@ -1,7 +1,7 @@
 - hosts: "{{ group | default('all_workers') }}"
   tasks: 
 
-  - name: Creation "{{ groupname }}" group
+  - name: Ensure group "{{ groupname }}" exists
     ansible.builtin.group:
       name: "{{ groupname }}"
       state: present
@@ -20,7 +20,7 @@
   - name: Check
     shell: |
       grep "{{ username }}" /etc/passwd
-     #groups "{{ groupname }}"
+      groups "{{ username }}"
     register: out
   - debug:
       msg: "{{ out.stdout_lines }}"
