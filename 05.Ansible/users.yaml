@@ -1,0 +1,32 @@
+- hosts: "{{ group | default('all_workers') }}"
+  tasks: 
+
+  - name: Creation "{{ groupname }}" group
+    ansible.builtin.group:
+      name: "{{ groupname }}"
+      state: present
+
+
+  - name: Add user "{{ username }}"
+    ansible.builtin.user:
+      name: "{{ username }}"
+      password: "{{password_user}}"
+      group: "{{ groupname }}"
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+      state: present
+
+  - name: Check
+    shell: |
+      grep "{{ username }}" /etc/passwd
+     #groups "{{ groupname }}"
+    register: out
+  - debug:
+      msg: "{{ out.stdout_lines }}"
+      msg: "{{ out }}"
+
+  - name: Removing user "{{ username }}"
+    user:
+      name: "{{ username }}"
+      state: absent
