@@ -21,6 +21,7 @@
     shell: |
       grep "{{ username }}" /etc/passwd
       groups "{{ username }}"
+      cat /home/"{{ username }}"/.ssh/id_rsa.pub
     register: out
   - debug:
       msg: "{{ out.stdout_lines }}"
