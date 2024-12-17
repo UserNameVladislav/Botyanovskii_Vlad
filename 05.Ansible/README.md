@@ -89,6 +89,30 @@ Execute the playbook and verify that the package is installed on the remote host
 Create a playbook to manage users and groups on a remote host.
 Define tasks to create a new user, assign the user to a specific group, and set a password.
 Parameterize the playbook to allow dynamic user and group names.
+
+- hosts: "{{ group | default('all_workers') }}"
+  tasks: 
+
+  - name: Ensure group "{{ groupname }}" exists
+    ansible.builtin.group: # используем модуль group
+      name: "{{ groupname }}" #динамическое (любое на свой выбор имя)
+      state: present #присутствует на удаленном хосте ( есть еще absent "удалить")
+
+
+  - name: Add user "{{ username }}" 
+    ansible.builtin.user: # модуль user
+      name: "{{ username }}" #динамическое имя 
+      password: "{{password_user}}" #задаем пароль тоже любой через -e
+      group: "{{ groupname }}" # присваеваем группу которую ввели выше
+      generate_ssh_key: yes # по мануалу глянул можно создать сразу на пользователя ssh_key
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+      state: present #присутствует
+      
+
 Execute the playbook and verify that the user and group configurations are applied.
+
+##completed
+
 Your ansible project add to folder 05.Ansible.start, create README.md with short report inside and prepare PR
 ```
