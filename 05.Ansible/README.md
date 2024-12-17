@@ -82,7 +82,9 @@ Execute the playbook and verify that the package is installed on the remote host
 
 ##Homework Assignment 3: Managing Users and Groups
 ```
-![img](ScrShot/Screen3.png)
+
+![img](ScrShot/Screen4.png)
+
 ```bash
 Create a playbook to manage users and groups on a remote host.
 Define tasks to create a new user, assign the user to a specific group, and set a password.
