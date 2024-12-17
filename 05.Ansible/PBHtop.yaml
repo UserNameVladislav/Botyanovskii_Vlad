@@ -1,0 +1,17 @@
+- hosts: all_workers
+  become: true
+ 
+  tasks:
+    - name: Install Htop
+      ansible.builtin.apt:
+        name: htop
+        state: latest
+
+#  task:
+#    - name: Check 
+ #     shell: |
+  #      dpkg -s htop
+   #   register: out
+#
+ #   - debug:
+  #      msg: "{{ out.stdout_lines }}"

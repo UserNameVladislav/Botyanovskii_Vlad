@@ -1,0 +1,6 @@
+- hosts: all_workers
+  become: true
+  
+  tasks:
+    - name: Install yum
+         apt: name=yum state=latest
