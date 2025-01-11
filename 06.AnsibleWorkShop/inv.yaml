@@ -3,4 +3,4 @@ db_all:
     ansible_ssh_common_args: '-o ProxyCommand="ssh -W %h:%p -q jump_sa@178.124.206.53 -p 32510"'
   hosts:
     mysql:
-      ansible_hosts: 192.168.201.12
+      ansible_hosts: 192.168.202.29
